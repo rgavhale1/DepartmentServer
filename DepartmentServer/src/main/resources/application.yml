@@ -1,0 +1,38 @@
+eureka:
+  client:
+    fetch-registry: true
+    healthcheck:
+      enabled: true
+    register-with-eureka: true
+    service-url:
+      defaultZone : http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+server:
+  port: 8084
+  servlet:
+     context-path: /DepartmentServer
+
+
+spring:
+  application:
+    name: DepartmentServer
+  cloud:
+    config:
+      enabled: true
+      uri:
+      - http://localhost:8080
+  data:
+    mongodb:
+      authentication-database: admin
+      database: test
+      host: localhost
+      port: 27017
+  zipkin:
+    enabled: true
+  main:
+    allow-bean-definition-overriding: true  
+  sleuth:
+    sampler:
+      rate: 100
+  
