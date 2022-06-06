@@ -130,7 +130,10 @@
  -->					</buildArgs>
 				</configuration>
 			</plugin>
+			
 		</plugins>
+		<finalName>departmentserver</finalName>
+
 	</build>
 
 </project>
